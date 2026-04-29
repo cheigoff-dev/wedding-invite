@@ -6,7 +6,8 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background: #fdfaf6;
+    background: #f5ebe0;
+    /* светло-кофейный фон */
     color: #4a3b2c;
     line-height: 1.5;
 }
@@ -17,7 +18,49 @@ body {
     padding: 20px 16px 40px;
 }
 
-/* Главный блок */
+/* ===== Блок с именами (над фото, с линиями) ===== */
+.names-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.line {
+    flex: 1;
+    height: 2px;
+    background: #d4b8a8;
+    /* кофейная линия */
+    min-width: 40px;
+}
+
+.line-left {
+    background: linear-gradient(90deg, transparent, #d4b8a8);
+}
+
+.line-right {
+    background: linear-gradient(90deg, #d4b8a8, transparent);
+}
+
+.names {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #e8a598;
+    /* пастельно-розовый */
+    white-space: nowrap;
+}
+
+.amp {
+    font-family: serif;
+    font-size: 1.8rem;
+    margin: 0 8px;
+    color: #e8a598;
+}
+
+/* ===== Главная фотография ===== */
 .hero-section {
     text-align: center;
     margin-bottom: 40px;
@@ -27,24 +70,12 @@ body {
     width: 100%;
     border-radius: 24px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
 }
 
-.names {
-    font-size: 2.5rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-}
-
-.amp {
-    font-family: serif;
-    font-size: 2rem;
-    margin: 0 8px;
-}
-
-/* Информационные блоки */
+/* ===== Общие стили для всех блоков ===== */
 .info-block {
-    background: white;
+    background: rgba(255, 250, 240, 0.8);
+    /* полупрозрачный светлый фон */
     border-radius: 28px;
     padding: 24px 20px;
     margin-bottom: 24px;
@@ -52,24 +83,31 @@ body {
     text-align: center;
 }
 
-.info-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    object-fit: cover;
-    margin-bottom: 16px;
-}
-
 .info-block h2 {
     font-size: 1.3rem;
-    margin-bottom: 12px;
-    color: #b47c5e;
+    margin-bottom: 16px;
+    color: #c48a7a;
+    /* пастельно-розовый для заголовков */
+}
+
+/* ===== Блок ЗАГС (большая фотография) ===== */
+.zags-block {
+    padding-bottom: 20px;
+}
+
+.zags-photo {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
 }
 
 .place-name {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 6px;
+    color: #4a3b2c;
 }
 
 .address {
@@ -77,10 +115,24 @@ body {
     color: #7a6a5a;
 }
 
+/* ===== Блок Время (фото увеличено) ===== */
+.time-block {
+    padding-bottom: 20px;
+}
+
+.time-photo {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
 .time {
     font-size: 2rem;
     font-weight: 700;
-    color: #b47c5e;
+    color: #e8a598;
+    /* пастельно-розовый */
     margin-bottom: 8px;
 }
 
@@ -89,7 +141,7 @@ body {
     color: #7a6a5a;
 }
 
-/* Карта */
+/* ===== Карта (без изменений) ===== */
 .map-block {
     padding-bottom: 20px;
 }
@@ -101,11 +153,13 @@ body {
     border: 1px solid #eee;
 }
 
+/* ===== Кнопка (пастельно-розовая) ===== */
 .map-btn {
-    background: #b47c5e;
-    color: white;
+    background: #f2c1b5;
+    /* пастельно-розовая */
+    color: #4a3b2c;
     border: none;
-    padding: 12px 24px;
+    padding: 14px 24px;
     border-radius: 40px;
     font-size: 1rem;
     font-weight: 500;
@@ -115,17 +169,29 @@ body {
 }
 
 .map-btn:hover {
-    background: #9a6348;
+    background: #e8a598;
+    color: white;
 }
 
-/* Адаптация под телефоны */
+/* ===== Адаптация под телефоны ===== */
 @media (max-width: 480px) {
     .container {
         padding: 16px 12px 32px;
     }
 
     .names {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .line {
+        display: none;
+        /* на маленьких экранах линии убираем */
+    }
+
+    .names-section {
+        gap: 0;
     }
 
     .time {

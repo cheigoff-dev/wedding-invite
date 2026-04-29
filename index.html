@@ -6,36 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Приглашение на свадьбу | Егор и Виктория</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Подключаем яндекс карты (API) -->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ba2440d5-b582-47b0-b44e-78c580ab7d0a&lang=ru_RU"
         type="text/javascript"></script>
 </head>
 
 <body>
     <div class="container">
-        <!-- Главная фотография и имена -->
+        <!-- Блок с именами (теперь над фото) -->
+        <div class="names-section">
+            <div class="line line-left"></div>
+            <h1 class="names">Егор <span class="amp">&</span> Виктория</h1>
+            <div class="line line-right"></div>
+        </div>
+
+        <!-- Главная фотография -->
         <div class="hero-section">
             <img src="images/cover.jpg" alt="Егор и Виктория" class="hero-photo">
-            <h1 class="names">Егор <span class="amp">&</span> Виктория</h1>
         </div>
 
-        <!-- Блок ЗАГС -->
-        <div class="info-block">
-            <img src="images/zags.jpg" alt="ЗАГС" class="info-icon">
+        <!-- Блок ЗАГС (теперь: заголовок сверху, потом большая фотография) -->
+        <div class="info-block zags-block">
             <h2>Торжественная регистрация</h2>
-            <p class="place-name">Дворец бракосочетания №1</p>
-            <p class="address">г. Москва, ул. Тверская, д. 15</p>
+            <img src="images/zags.jpg" alt="ЗАГС" class="zags-photo">
+            <p class="place-name">Митинский Дворец бракосочетания</p>
+            <p class="address">г. Москва, ул. Дубравная, 48А</p>
         </div>
 
-        <!-- Блок Время -->
-        <div class="info-block">
-            <img src="images/time.jpg" alt="Время" class="info-icon">
+        <!-- Блок Время (фотография сверху, заголовок под ней) -->
+        <div class="info-block time-block">
+            <img src="images/time.jpg" alt="Время" class="time-photo">
             <h2>Время начала сбора</h2>
-            <p class="time">13:00</p>
-            <p class="date">15 июня 2026 года</p>
+            <p class="time">12:50</p>
+            <p class="date">8 августа 2026 года</p>
         </div>
 
-        <!-- Блок Карта (Яндекс) -->
+        <!-- Блок Карта (без изменений) -->
         <div class="info-block map-block">
             <h2>Как нас найти</h2>
             <div id="map" style="width: 100%; height: 300px;"></div>
