@@ -17,7 +17,7 @@ body {
     padding: 20px 16px 40px;
 }
 
-/* ===== Главная фотография (первая) ===== */
+/* ===== Главная фотография ===== */
 .hero-section {
     text-align: center;
     margin-bottom: 30px;
@@ -29,43 +29,45 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== Блок с именами (ПОСЛЕ фото, с отступом и линиями) ===== */
+/* ===== Блок с именами ===== */
 .names-section {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
     margin-bottom: 40px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .line {
     flex: 1;
     height: 2px;
-    min-width: 40px;
+    min-width: 30px;
 }
 
 .line-left {
-    background: linear-gradient(90deg, transparent, #d4b8a8);
+    background: linear-gradient(90deg, transparent, #c48a7a);
 }
 
 .line-right {
-    background: linear-gradient(90deg, #d4b8a8, transparent);
+    background: linear-gradient(90deg, #c48a7a, transparent);
 }
 
 .names {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 600;
     letter-spacing: 2px;
-    color: #e8a598;
+    color: #c48a7a;
+    /* ← теперь как у "Торжество состоится" */
     white-space: nowrap;
 }
 
 .amp {
     font-family: serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin: 0 8px;
-    color: #e8a598;
+    color: #c48a7a;
+    /* ← тот же цвет */
 }
 
 /* ===== Общие стили для блоков ===== */
@@ -82,6 +84,7 @@ body {
     font-size: 1.3rem;
     margin-bottom: 16px;
     color: #c48a7a;
+    /* ← единый цвет для всех заголовков */
 }
 
 /* ===== Блок ЗАГС ===== */
@@ -105,7 +108,7 @@ body {
     color: #7a6a5a;
 }
 
-/* ===== Блок Время (календарь, квадратное фото) ===== */
+/* ===== Блок Время (календарь квадратный) ===== */
 .calendar-photo {
     width: 100%;
     max-width: 280px;
@@ -115,13 +118,6 @@ body {
     margin: 0 auto 20px auto;
     display: block;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.time {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #e8a598;
-    margin-bottom: 8px;
 }
 
 .date-full {
@@ -156,36 +152,30 @@ body {
 }
 
 .map-btn:hover {
-    background: #e8a598;
+    background: #c48a7a;
     color: white;
 }
 
-/* ===== Адаптация под телефоны (линии НЕ скрываем, а уменьшаем) ===== */
+/* ===== Адаптация под телефоны ===== */
 @media (max-width: 480px) {
     .container {
         padding: 16px 12px 32px;
     }
 
     .names {
-        font-size: 1.5rem;
-        white-space: normal;
-        text-align: center;
+        font-size: 1.4rem;
+        white-space: nowrap;
     }
 
     .amp {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
-    /* Линии остаются, просто становятся короче */
     .line {
         min-width: 20px;
     }
 
-    .time {
-        font-size: 1.8rem;
-    }
-
     .calendar-photo {
-        max-width: 220px;
+        max-width: 200px;
     }
 }
