@@ -7,7 +7,6 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background: #f5ebe0;
-    /* светло-кофейный фон */
     color: #4a3b2c;
     line-height: 1.5;
 }
@@ -18,21 +17,31 @@ body {
     padding: 20px 16px 40px;
 }
 
-/* ===== Блок с именами (над фото, с линиями) ===== */
+/* ===== Главная фотография (первая) ===== */
+.hero-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-photo {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Блок с именами (ПОСЛЕ фото, с отступом и линиями) ===== */
 .names-section {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
 }
 
 .line {
     flex: 1;
     height: 2px;
-    background: #d4b8a8;
-    /* кофейная линия */
     min-width: 40px;
 }
 
@@ -49,7 +58,6 @@ body {
     font-weight: 600;
     letter-spacing: 2px;
     color: #e8a598;
-    /* пастельно-розовый */
     white-space: nowrap;
 }
 
@@ -60,22 +68,9 @@ body {
     color: #e8a598;
 }
 
-/* ===== Главная фотография ===== */
-.hero-section {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.hero-photo {
-    width: 100%;
-    border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* ===== Общие стили для всех блоков ===== */
+/* ===== Общие стили для блоков ===== */
 .info-block {
     background: rgba(255, 250, 240, 0.8);
-    /* полупрозрачный светлый фон */
     border-radius: 28px;
     padding: 24px 20px;
     margin-bottom: 24px;
@@ -87,14 +82,9 @@ body {
     font-size: 1.3rem;
     margin-bottom: 16px;
     color: #c48a7a;
-    /* пастельно-розовый для заголовков */
 }
 
-/* ===== Блок ЗАГС (большая фотография) ===== */
-.zags-block {
-    padding-bottom: 20px;
-}
-
+/* ===== Блок ЗАГС ===== */
 .zags-photo {
     width: 100%;
     border-radius: 20px;
@@ -115,33 +105,34 @@ body {
     color: #7a6a5a;
 }
 
-/* ===== Блок Время (фото увеличено) ===== */
-.time-block {
-    padding-bottom: 20px;
-}
-
-.time-photo {
+/* ===== Блок Время (календарь, квадратное фото) ===== */
+.calendar-photo {
     width: 100%;
-    border-radius: 20px;
-    margin-bottom: 16px;
-    aspect-ratio: 16 / 9;
+    max-width: 280px;
+    /* ограничиваем ширину, чтобы было квадратным */
+    aspect-ratio: 1 / 1;
+    /* квадрат */
     object-fit: cover;
+    border-radius: 24px;
+    margin: 0 auto 20px auto;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .time {
     font-size: 2rem;
     font-weight: 700;
     color: #e8a598;
-    /* пастельно-розовый */
     margin-bottom: 8px;
 }
 
-.date {
-    font-size: 1rem;
+.date-full {
+    font-size: 1.1rem;
     color: #7a6a5a;
+    font-weight: 500;
 }
 
-/* ===== Карта (без изменений) ===== */
+/* ===== Карта ===== */
 .map-block {
     padding-bottom: 20px;
 }
@@ -153,10 +144,8 @@ body {
     border: 1px solid #eee;
 }
 
-/* ===== Кнопка (пастельно-розовая) ===== */
 .map-btn {
     background: #f2c1b5;
-    /* пастельно-розовая */
     color: #4a3b2c;
     border: none;
     padding: 14px 24px;
@@ -180,21 +169,20 @@ body {
     }
 
     .names {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         white-space: normal;
         text-align: center;
     }
 
     .line {
         display: none;
-        /* на маленьких экранах линии убираем */
-    }
-
-    .names-section {
-        gap: 0;
     }
 
     .time {
         font-size: 1.8rem;
+    }
+
+    .calendar-photo {
+        max-width: 220px;
     }
 }

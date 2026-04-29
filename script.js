@@ -4,7 +4,6 @@ const ZAGS_LAT = 55.840649;
 const ZAGS_LON = 37.348302;
 const ZAGS_NAME = "Митинский Дворец бракосочетания";
 
-// Функция загрузки карты (без изменений)
 function initYandexMap() {
     if (typeof ymaps === 'undefined') {
         console.log('Ждем загрузки Яндекс.Карт...');
