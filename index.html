@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Приглашение на свадьбу | Егор и Виктория</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем яндекс карты (API) -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ba2440d5-b582-47b0-b44e-78c580ab7d0a&lang=ru_RU"
+        type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Главная фотография и имена -->
+        <div class="hero-section">
+            <img src="images/cover.jpg" alt="Егор и Виктория" class="hero-photo">
+            <h1 class="names">Егор <span class="amp">&</span> Виктория</h1>
+        </div>
+
+        <!-- Блок ЗАГС -->
+        <div class="info-block">
+            <img src="images/zags.jpg" alt="ЗАГС" class="info-icon">
+            <h2>Торжественная регистрация</h2>
+            <p class="place-name">Дворец бракосочетания №1</p>
+            <p class="address">г. Москва, ул. Тверская, д. 15</p>
+        </div>
+
+        <!-- Блок Время -->
+        <div class="info-block">
+            <img src="images/time.jpg" alt="Время" class="info-icon">
+            <h2>Время начала сбора</h2>
+            <p class="time">13:00</p>
+            <p class="date">15 июня 2026 года</p>
+        </div>
+
+        <!-- Блок Карта (Яндекс) -->
+        <div class="info-block map-block">
+            <h2>Как нас найти</h2>
+            <div id="map" style="width: 100%; height: 300px;"></div>
+            <button id="openMapBtn" class="map-btn">Открыть в Яндекс.Картах</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
