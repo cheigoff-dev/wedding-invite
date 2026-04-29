@@ -109,9 +109,7 @@ body {
 .calendar-photo {
     width: 100%;
     max-width: 280px;
-    /* ограничиваем ширину, чтобы было квадратным */
     aspect-ratio: 1 / 1;
-    /* квадрат */
     object-fit: cover;
     border-radius: 24px;
     margin: 0 auto 20px auto;
@@ -162,20 +160,25 @@ body {
     color: white;
 }
 
-/* ===== Адаптация под телефоны ===== */
+/* ===== Адаптация под телефоны (линии НЕ скрываем, а уменьшаем) ===== */
 @media (max-width: 480px) {
     .container {
         padding: 16px 12px 32px;
     }
 
     .names {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         white-space: normal;
         text-align: center;
     }
 
+    .amp {
+        font-size: 1.4rem;
+    }
+
+    /* Линии остаются, просто становятся короче */
     .line {
-        display: none;
+        min-width: 20px;
     }
 
     .time {
