@@ -29,28 +29,26 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== Блок с именами ===== */
+/* ===== Блок с именами (полоски сверху И снизу) ===== */
 .names-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
-    flex-wrap: nowrap;
+    text-align: center;
+    margin: 30px 0 40px 0;
 }
 
-.line {
-    flex: 1;
+.top-line,
+.bottom-line {
+    width: 80px;
     height: 2px;
-    min-width: 30px;
+    background: #c48a7a;
+    margin: 0 auto;
 }
 
-.line-left {
-    background: linear-gradient(90deg, transparent, #c48a7a);
+.top-line {
+    margin-bottom: 15px;
 }
 
-.line-right {
-    background: linear-gradient(90deg, #c48a7a, transparent);
+.bottom-line {
+    margin-top: 15px;
 }
 
 .names {
@@ -58,8 +56,7 @@ body {
     font-weight: 600;
     letter-spacing: 2px;
     color: #c48a7a;
-    /* ← теперь как у "Торжество состоится" */
-    white-space: nowrap;
+    margin: 0;
 }
 
 .amp {
@@ -67,7 +64,6 @@ body {
     font-size: 1.6rem;
     margin: 0 8px;
     color: #c48a7a;
-    /* ← тот же цвет */
 }
 
 /* ===== Общие стили для блоков ===== */
@@ -84,7 +80,6 @@ body {
     font-size: 1.3rem;
     margin-bottom: 16px;
     color: #c48a7a;
-    /* ← единый цвет для всех заголовков */
 }
 
 /* ===== Блок ЗАГС ===== */
@@ -108,7 +103,7 @@ body {
     color: #7a6a5a;
 }
 
-/* ===== Блок Время (календарь квадратный) ===== */
+/* ===== Блок Время ===== */
 .calendar-photo {
     width: 100%;
     max-width: 280px;
@@ -163,16 +158,16 @@ body {
     }
 
     .names {
-        font-size: 1.4rem;
-        white-space: nowrap;
+        font-size: 1.5rem;
     }
 
     .amp {
         font-size: 1.3rem;
     }
 
-    .line {
-        min-width: 20px;
+    .top-line,
+    .bottom-line {
+        width: 60px;
     }
 
     .calendar-photo {
