@@ -29,40 +29,28 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== Блок с именами (полоски сверху И снизу) ===== */
+/* ===== Блок с именами (без полосок, красивый шрифт) ===== */
 .names-section {
     text-align: center;
-    margin: 30px 0 40px 0;
-}
-
-.top-line,
-.bottom-line {
-    width: 80px;
-    height: 2px;
-    background: #c48a7a;
-    margin: 0 auto;
-}
-
-.top-line {
-    margin-bottom: 15px;
-}
-
-.bottom-line {
-    margin-top: 15px;
+    margin: 20px 0 40px 0;
 }
 
 .names {
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: 2px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 1px;
     color: #c48a7a;
     margin: 0;
 }
 
 .amp {
-    font-family: serif;
-    font-size: 1.6rem;
-    margin: 0 8px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0 6px;
     color: #c48a7a;
 }
 
@@ -77,7 +65,10 @@ body {
 }
 
 .info-block h2 {
+    font-family: 'Georgia', 'Times New Roman', serif;
     font-size: 1.3rem;
+    font-weight: 400;
+    font-style: italic;
     margin-bottom: 16px;
     color: #c48a7a;
 }
@@ -158,16 +149,15 @@ body {
     }
 
     .names {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .amp {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
-    .top-line,
-    .bottom-line {
-        width: 60px;
+    .info-block h2 {
+        font-size: 1.1rem;
     }
 
     .calendar-photo {
