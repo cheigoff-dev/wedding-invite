@@ -32,7 +32,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== Блок с именами (Cormorant Garamond, курсив) ===== */
+/* ===== Блок с именами ===== */
 .names-section {
     text-align: center;
     margin: 20px 0 40px 0;
@@ -48,7 +48,7 @@ body {
     letter-spacing: 1px;
 }
 
-/* ===== Общие стили для блоков ===== */
+/* ===== Общие стили для блоков (ЗАГОЛОВКИ УВЕЛИЧЕНЫ) ===== */
 .info-block {
     background: rgba(255, 250, 240, 0.8);
     border-radius: 28px;
@@ -60,7 +60,8 @@ body {
 
 .info-block h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    /* было 1.5rem — увеличил */
     font-weight: 600;
     font-style: italic;
     margin-bottom: 16px;
@@ -150,7 +151,8 @@ body {
     }
 
     .info-block h2 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+        /* на телефоне тоже увеличен */
     }
 
     .place-name {
