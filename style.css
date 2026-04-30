@@ -32,7 +32,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== Блок с именами ===== */
+/* ===== Блок с именами (НЕ ТРОГАЕМ) ===== */
 .names-section {
     text-align: center;
     margin: 20px 0 40px 0;
@@ -48,7 +48,7 @@ body {
     letter-spacing: 1px;
 }
 
-/* ===== Общие стили для блоков (ЗАГОЛОВКИ УВЕЛИЧЕНЫ) ===== */
+/* ===== Общие стили для блоков ===== */
 .info-block {
     background: rgba(255, 250, 240, 0.8);
     border-radius: 28px;
@@ -58,10 +58,10 @@ body {
     text-align: center;
 }
 
+/* ТОЛЬКО ЭТОТ БЛОК ИЗМЕНИЛ (размер увеличен до 2rem) */
 .info-block h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    /* было 1.5rem — увеличил */
+    font-size: 2rem;
     font-weight: 600;
     font-style: italic;
     margin-bottom: 16px;
@@ -102,11 +102,11 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* ТОЛЬКО ЭТОТ БЛОК ИЗМЕНИЛ (вернул обычный шрифт) */
 .date-full {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.1rem;
     color: #7a6a5a;
+    font-weight: 500;
 }
 
 /* ===== Карта ===== */
@@ -150,9 +150,9 @@ body {
         font-size: 2.2rem;
     }
 
+    /* НА ТЕЛЕФОНЕ ТОЖЕ УВЕЛИЧИЛ */
     .info-block h2 {
-        font-size: 1.4rem;
-        /* на телефоне тоже увеличен */
+        font-size: 1.8rem;
     }
 
     .place-name {
